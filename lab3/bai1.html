@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    do{
+        let tinhdiem=prompt("1.Tính điểm trung bình(swicth case)\n2.Tính điểm trung bình(if else)\n3.Thoát");//khai báo biến 
+        switch(tinhdiem){//sử dụng vòng lặp swicth case để thực hiện các chức năng
+        case "1":
+            //nhập vào giá trị các biến 
+        let Toan=parseFloat(prompt("Nhập vào điểm Toán"));
+        let Ly=parseFloat(prompt("Nhập vào điểm Lý"));
+        let Hoa=parseFloat(prompt("Nhập vào điểm Hóa"));
+        let Sinh=parseFloat(prompt("Nhập vào điểm Sinh"));
+        let Tb =parseFloat((Toan+Ly+Hoa+Sinh)/4);//tính trung bình cộng
+        console.log("Điểm trung bình cộng 4 môn là: "+Tb);//in kết quả ra console
+        //sử dụng cấu trúc rẽ nhánh if else để xếp loại
+        if(Tb>=9){
+        console.log("Học sinh giỏi");
+        }else if(Tb>=7){
+        console.log("Học sinh khá");
+        }else if(Tb>=5){
+        console.log("Học sinh trung bình");
+        }else if(Tb<5){
+        console.log("Học sinh yếu");//dùng cấu trúc rẽ nháp if else để sắp xếp học lực cho hs
+        }
+        break;
+        case "2":
+            //nhập vào giá trị các biến 
+        let toan=parseFloat(prompt("Nhập vào điểm Toán"));
+        let ly=parseFloat(prompt("Nhập vào điểm Lý"));
+        let hoa=parseFloat(prompt("Nhập vào điểm Hóa"));
+        let sinh=parseFloat(prompt("Nhập vào điểm Sinh"));
+        let tb=parseFloat((toan+ly+hoa+sinh)/4);//tính trung bình cộng
+        console.log("Điểm trung bình cộng 4 môn là: "+tb);//in kết quả ra console
+        Tbb=Number(tb);//ép kiểu thành kiểu number cho tb 
+        switch(Tbb){
+            case 10:
+            case 9:
+            console.log("Học sinh giỏi");
+            break;  //case 10 và 9 in ra màn hình console và break.
+            case 8:
+            case 7:
+            console.log("Học sinh khá");//case 8 và 7 in ra màn hình console và break.
+            break;
+            case 6:
+            case 5:
+            console.log("Học sinh trung bình");//case 6 và 5 in ra màn hình console và break.
+            break;
+            default:
+            console.log("Học sinh yếu");// khong phải những case trên thì in ra console hs yếu
+            
+        }
+        break;
+        
+    }}while(tinhdiem!=0);
+
+       
+    </script>
+</body>
+</html>
