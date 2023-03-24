@@ -8,15 +8,16 @@
 </head>
 <body>
     <script>
-    do{
         let tinhdiem=prompt("1.Tính điểm trung bình(swicth case)\n2.Tính điểm trung bình(if else)\n3.Thoát");//khai báo biến 
         switch(tinhdiem){//sử dụng vòng lặp swicth case để thực hiện các chức năng
         case "1":
             //nhập vào giá trị các biến 
-        let Toan=parseFloat(prompt("Nhập vào điểm Toán"));
-        let Ly=parseFloat(prompt("Nhập vào điểm Lý"));
-        let Hoa=parseFloat(prompt("Nhập vào điểm Hóa"));
-        let Sinh=parseFloat(prompt("Nhập vào điểm Sinh"));
+        do{
+        var Toan=parseFloat(prompt("Nhập vào điểm Toán"));
+        var Ly=parseFloat(prompt("Nhập vào điểm Lý"));
+        var Hoa=parseFloat(prompt("Nhập vào điểm Hóa"));
+        var Sinh=parseFloat(prompt("Nhập vào điểm Sinh"));
+        }while(Toan <= 0 || Toan >= 10 && Ly <= 0 || Ly >= 10 && Hoa <= 0 || Hoa >= 10 && Sinh <= 0 || Sinh >= 10 );//kiểm tra giá trị đầu vào 
         let Tb =parseFloat((Toan+Ly+Hoa+Sinh)/4);//tính trung bình cộng
         console.log("Điểm trung bình cộng 4 môn là: "+Tb);//in kết quả ra console
         //sử dụng cấu trúc rẽ nhánh if else để xếp loại
@@ -32,13 +33,15 @@
         break;
         case "2":
             //nhập vào giá trị các biến 
-        let toan=parseFloat(prompt("Nhập vào điểm Toán"));
-        let ly=parseFloat(prompt("Nhập vào điểm Lý"));
-        let hoa=parseFloat(prompt("Nhập vào điểm Hóa"));
-        let sinh=parseFloat(prompt("Nhập vào điểm Sinh"));
-        let tb=parseFloat((toan+ly+hoa+sinh)/4);//tính trung bình cộng
+        do{    
+        var toan=parseFloat(prompt("Nhập vào điểm Toán"));
+        var ly=parseFloat(prompt("Nhập vào điểm Lý"));
+        var hoa=parseFloat(prompt("Nhập vào điểm Hóa"));
+        var sinh=parseFloat(prompt("Nhập vào điểm Sinh"));
+        }while(toan <= 0 || toan >= 10 && ly <= 0 || ly >= 10 && hoa <= 0 || hoa >= 10 && sinh <= 0 || sinh >= 10 );//kiểm tra giá trị đầu vào 
+        var tb=parseFloat((toan+ly+hoa+sinh)/4);//tính trung bình cộng
         console.log("Điểm trung bình cộng 4 môn là: "+tb);//in kết quả ra console
-        Tbb=Number(tb);//ép kiểu thành kiểu number cho tb 
+        var Tbb=Number(tb);//ép kiểu thành kiểu number cho tb 
         switch(Tbb){
             case 10:
             case 9:
@@ -58,7 +61,7 @@
         }
         break;
         
-    }}while(tinhdiem!=0);
+    }
 
        
     </script>
